@@ -16,3 +16,10 @@ python-periphery
 
 ~~~
 
+## 致谢
+
+[@dyh1393880028](https://github.com/dyh1393880028)
+[@hdj6666](https://github.com/hdj6666)
+[@Knys-x](https://github.com/Knys-x)
+[@XAN39](https://github.com/XAN39)
+
