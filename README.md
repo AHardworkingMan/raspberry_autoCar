@@ -6,11 +6,11 @@ This project is developed based on Huawei ATLAS200DK and has functions such as f
 
 ## Table of Contents
 
-[Basic Configuration](##Basic Configuration)
+- [Basic Configuration](##Basic Configuration)
 
-[Project Dependency](##Project Dependency)
+- [Project Dependency](##Project Dependency)
 
-[Team](##Team)
+- [Team](##Team)
 
 ## Basic Configuration
 
