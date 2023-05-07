@@ -4,6 +4,14 @@ English|[中文](./README_CN.md)
 
 This project is developed based on Huawei ATLAS200DK and has functions such as following, obstacle avoidance, image transmission, and autonomous driving.
 
+## Table of Contents
+
+[Basic Configuration](##Basic Configuration)
+
+[Project Dependency](##Project Dependency)
+
+[Team](##Team)
+
 ## Basic Configuration
 
 [200dk_Configuration](./200dk踩坑.md)
@@ -15,9 +23,12 @@ Python-3.7.5
 python-periphery
 ~~~
 
-## Credits
+## Team
 
 [@dyh1393880028](https://github.com/dyh1393880028)
+
 [@hdj6666](https://github.com/hdj6666)
+
 [@Knys-x](https://github.com/Knys-x)
+
 [@XAN39](https://github.com/XAN39)
