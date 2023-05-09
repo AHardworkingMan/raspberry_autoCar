@@ -25,6 +25,8 @@ python-periphery
 
 ## Team
 
+[@AHardworkingMan](https://github.com/AHardworkingMan)
+
 [@dyh1393880028](https://github.com/dyh1393880028)
 
 [@hdj6666](https://github.com/hdj6666)
