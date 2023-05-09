@@ -2,7 +2,9 @@
 
 # 嵌入式开发项目--自动跟随小车
 
-本项目基于华为ATLAS200DK开发，拥有跟随、避障、图传、循道驾驶功能
+----南京林业大学嵌入式开发大作业
+
+本项目基于华为Atlas 200Developer Kit，拥有跟随、避障、图传、循道驾驶功能
 
 ### 内容列表
 
@@ -14,14 +16,19 @@
 
 ## 开发板基础配置
 
+Atlas 200Developer Kit的虚拟机连接方式、开发板连接网络、更改时间、虚拟机安装MindStudio等操作详见下文：
+
 [200dk踩坑](./200dk踩坑.md)
 
 ## 依赖
 
 ~~~
-Python-3.7.5
-python-periphery
-
+openCV
+x264
+ffmpeg
+acllite
+protobuf
+presentagent
 ~~~
 
 ## 团队
