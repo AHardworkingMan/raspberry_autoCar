@@ -9,7 +9,7 @@ This project is developed based on Huawei Atlas 200Developer Kit and has functio
 ## Table of Contents
 
 - [Basic Configuration](#Basic-Configuration)
-- [Hardware Devices](#Hardware Devices)
+- [Hardware Devices](#Hardware-Devices)
 - [Project Dependency](#Project-Dependency)
 - [Team](#Team)
 
