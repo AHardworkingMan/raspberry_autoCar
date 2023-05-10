@@ -9,9 +9,8 @@ This project is developed based on Huawei Atlas 200Developer Kit and has functio
 ## Table of Contents
 
 - [Basic Configuration](#Basic-Configuration)
-
+- [Hardware Devices](#Hardware Devices)
 - [Project Dependency](#Project-Dependency)
-
 - [Team](#Team)
 
 ## Basic Configuration
@@ -19,6 +18,8 @@ This project is developed based on Huawei Atlas 200Developer Kit and has functio
 How Atlas 200 Developer Kit connects virtual machines, how the development board connects to the network, changes the development board time, and installs MindStudio on virtual machines are detailed below:
 
 [200dk_Configuration](./200dk踩坑.md)
+
+## Hardware Devices
 
 ## Project Dependency
 
