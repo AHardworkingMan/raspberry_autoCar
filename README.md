@@ -21,6 +21,16 @@ How Atlas 200 Developer Kit connects virtual machines, how the development board
 
 ## Hardware Devices
 
+- Atlas 200 DK
+- Raspberry pie camera v2.1
+- Smart car soleplate
+- Motor driver hat i2c
+- Different kinds of lines
+- Multi-Output Lithium Battery 12V
+- Wireless router
+- 0.96 inch OLED display
+- Infrared sensor
+
 ## Project Dependency
 
 ~~~
