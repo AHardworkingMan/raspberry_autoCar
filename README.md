@@ -9,16 +9,27 @@ This project is developed based on Huawei Atlas 200Developer Kit and has functio
 ## Table of Contents
 
 - [Basic Configuration](#Basic-Configuration)
-
+- [Hardware Devices](#Hardware-Devices)
 - [Project Dependency](#Project-Dependency)
-
 - [Team](#Team)
 
 ## Basic Configuration
 
-How Atlas 200 Developer Kit connects virtual machines, how the development board connects to the network, changes the development board time, and installs MindStudio on virtual machines are detailed below:
+How Atlas 200 Developer Kit connects virtual machines, how the development board connects to the network, changes the development board time, and how to install MindStudio on virtual machine are detailed below:
 
 [200dk_Configuration](./200dk踩坑.md)
+
+## Hardware Devices
+
+- Atlas 200 DK
+- Raspberry pie camera v2.1
+- Smart car soleplate
+- Motor driver hat i2c
+- Different kinds of lines
+- Multi-Output Lithium Battery 12V
+- Wireless router
+- 0.96 inch OLED display
+- Infrared sensor
 
 ## Project Dependency
 
