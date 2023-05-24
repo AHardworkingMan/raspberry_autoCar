@@ -62,7 +62,7 @@ int wheel::wheel_left_move(int direction,unsigned char speed)
     unsigned short value = speed*80;
 
     printf("zhimins wheel left move\n");
-    if(direction == 1)
+    if(direction == -1)
     {
         i2c_ctrl.atlas_i2c_write(slave_addr,0x0c,0x00);
         i2c_ctrl.atlas_i2c_write(slave_addr,0x0d,0x00);
@@ -71,7 +71,7 @@ int wheel::wheel_left_move(int direction,unsigned char speed)
         i2c_ctrl.atlas_i2c_write(slave_addr,0x11,value>>8);
 
     }
-    else if(direction == -1)
+    else if(direction == 1)
     {
         i2c_ctrl.atlas_i2c_write(slave_addr,0x0c,value&0xff);
         i2c_ctrl.atlas_i2c_write(slave_addr,0x0d,value>>8);
@@ -100,7 +100,7 @@ int wheel::wheel_right_move(int direction,unsigned char speed)
 {
     unsigned short value = speed*80 ;
     printf("zhimins wheel right move\n");
-    if(direction == 1)
+    if(direction == -1)
     {
         i2c_ctrl.atlas_i2c_write(slave_addr,0x14,0x00);
         i2c_ctrl.atlas_i2c_write(slave_addr,0x15,0x00);
@@ -109,7 +109,7 @@ int wheel::wheel_right_move(int direction,unsigned char speed)
         i2c_ctrl.atlas_i2c_write(slave_addr,0x19,value>>8);
 
     }
-    else if(direction == -1)
+    else if(direction == 1)
     {
         i2c_ctrl.atlas_i2c_write(slave_addr,0x14,value&0xff);
         i2c_ctrl.atlas_i2c_write(slave_addr,0x15,value>>8);
