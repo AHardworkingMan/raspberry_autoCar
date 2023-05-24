@@ -119,36 +119,43 @@ int process_recevier_data(unsigned char cmd,unsigned char param1,unsigned char p
                 int right;
                 int direction;
 
-                if(y<0)
+                if(y<=0)
                 {
-                    left =  fabs((y*15)/100);
-                    right = fabs((y*15)/100);
+                    if (y == 0) {// stop
+                        left = 0;
+                        right = 0;
+                    }
+                    else{// back
+                        left =  7;
+                        right = 7;
+                    }
                     direction = -1;
                 }
                 else
                 {
                     if(x>0)
                     {
-                        left =  fabs((y*15)/100)+fabs((x*15)/100)/4;
-                        right = fabs((y*15)/100)-fabs((x*15)/100)/4;
-                        if(left>15)
-                            left = 15;
-                        if(right<0)
+                        if ((y / x) >= 1.73) {  // go straight on
+                            left = 12;
+                            right = 12;
+                        }
+                        else { // turn right
+                            left = 8;
                             right = 0;
+                        }
                     }
                     else
                     {
-                        left =  fabs((y*15)/100)-fabs((x*15)/100)/4;
-                        right = fabs((y*15)/100)+fabs((x*15)/100)/4;
-                        if(right>15)
-                               right = 15;
-                        if(left<0)
-                               left = 0;
+                        if ((y / x) <= -1.73 || x == 0) {// go straight on
+                            left = 12;
+                            right = 12;
+                        }
+                        else { // turn left
+                            left = 0;
+                            right = 8;
+                        }
                     }
-
-
                     direction = 1;
-
                 }
                 //UART_PRINT.UPRINT("set speed.........%d  %d %d \n",direction,left,right);
                 if(shared_stuff->written_flag==0)
