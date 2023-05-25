@@ -1,6 +1,3 @@
-/* unknown */
-
-
 #include <memory>
 #include <fstream>
 #include <sstream>
