@@ -1,4 +1,3 @@
-
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <stdio.h>
@@ -28,7 +27,7 @@
 #include <arpa/inet.h>
 #include <sys/ioctl.h>
 #include <netinet/in.h>
-
+#include <iostream>
 
 
 #include "common_post.h"
@@ -96,6 +95,59 @@ int process_recevier_data(unsigned char cmd,unsigned char param1,unsigned char p
     {
         case 1:  //red
             {
+                io_ctrl.gpio_set_direction(4, 1);
+                io_ctrl.gpio_set_direction(3, 0);
+                io_ctrl.gpio_set_value(4, 1);
+                io_ctrl.gpio_set_direction(6, 1);
+                io_ctrl.gpio_set_direction(5, 0);
+                io_ctrl.gpio_set_value(6, 1);
+
+                int left_value, right_value;
+                if (shared_stuff->written_flag == 0) {
+                    shared_stuff->remote_direction = 1;
+                    shared_stuff->remote_left_speed = 0x07;
+                    shared_stuff->remote_right_speed = 0x07;
+                    shared_stuff->written_flag = 1;
+                }
+                int left;
+                int right;
+                while (1)
+                {
+                    io_ctrl.gpio_get_value(3, &left_value);
+                    io_ctrl.gpio_get_value(5, &right_value);
+                    if (right_value == 0 && left_value == 0)
+                    {
+                        left = 0;
+                        right = 0;
+                    }
+                    else if (right_value == 1 && left_value == 0)
+                    {
+                        left = 9;
+                        right = 0;
+                    }
+                    else if (right_value == 0 && left_value == 1)
+                    {
+                        left = 0;
+                        right = 9;
+                    }
+                    else if (right_value == 1 && left_value == 1)
+                    {
+                        left = 6;
+                        right = 6;
+                    }
+                    
+                    if (shared_stuff->written_flag == 0) {
+                        shared_stuff->remote_direction = 1;
+                        shared_stuff->remote_left_speed = left;
+                        shared_stuff->remote_right_speed = right;
+                        shared_stuff->written_flag = 1;
+                    }
+                    if (left == 0 && right == 0) {
+                        break;
+                    }
+                    usleep(400000);
+                }
+
             }
             break;
         case 2:  //green
