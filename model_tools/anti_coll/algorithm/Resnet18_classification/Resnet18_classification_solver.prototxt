@@ -1,0 +1,20 @@
+net: "E:/rasp_model/code/Algorithm-collision_anti-drop/algorithm/Resnet18_classification/Resnet18_class_train.prototxt"
+
+test_iter: 17
+test_interval: 490
+
+base_lr: 0.0001
+
+lr_policy: "poly"
+power: 1
+momentum: 0.9
+weight_decay: 0.0005
+
+display: 200
+
+max_iter: 50000
+snapshot: 10000
+
+snapshot_prefix: "E:/rasp_model/code/Algorithm-collision_anti-drop/algorithm/Resnet18_table_weights/add_table_nj"
+
+solver_mode: GPU

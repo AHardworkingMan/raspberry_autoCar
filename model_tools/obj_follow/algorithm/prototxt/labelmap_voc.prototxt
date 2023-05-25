@@ -1,0 +1,77 @@
+item {
+label: 1
+name: 'cup'
+display_name: "cup"
+}
+
+item {
+label: 2
+name: 'car'
+display_name: "car"
+}
+
+item {
+label: 3
+name: 'box'
+display_name: "box"
+}
+
+item {
+label: 4
+name: 'person'
+display_name: "person"
+}
+
+item {
+label: 5
+name: 'hand'
+display_name: "hand"
+}
+
+item {
+label: 6
+name: 'bottle'
+display_name: "bottle"
+}
+
+item {
+label: 7
+name: 'phone'
+display_name: "phone"
+}
+
+item {
+label: 8
+name: 'book'
+display_name: "book"
+}
+
+item {
+label: 9
+name: 'line'
+display_name: "line"
+}
+
+item {
+label: 10
+name: 'left_round'
+display_name: "left_round"
+}
+
+item {
+label: 11
+name: 'right_round'
+display_name: "right_round"
+}
+
+item {
+label: 12
+name: 'edge'
+display_name: "edge"
+}
+
+item {
+label: 13
+name: 'light'
+display_name: "light"
+}
