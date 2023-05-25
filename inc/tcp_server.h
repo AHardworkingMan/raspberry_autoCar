@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 #include "common.h"
-
+#include "gpio.h"
 class tcp_server {
 public:
     tcp_server(void) ;
@@ -16,6 +16,7 @@ public:
     int tcp_server_create(void);
 private:
     int server_shm_init(void);
+    gpio io_ctrl;
 };
 
 //int tcp_server_create(void);
