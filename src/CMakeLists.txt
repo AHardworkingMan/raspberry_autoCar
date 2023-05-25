@@ -35,24 +35,31 @@ include_directories(
     ../inc/
     $ENV{HOME}/ascend_ddk/include/third_party/
     ${INC_PATH}/runtime/include/
+    ${INC_PATH}/acllib/include/
     $ENV{HOME}/ascend_ddk/include/
     $ENV{HOME}/Ascend/
-    $ENV{HOME}/Ascend/
+    $ENV{HOME}/Ascend/driver/
+    $ENV{HOME}/Ascend/ascend-toolkit/5.1.RC1.alpha005/
+    $ENV{THIRDPART_PATH}/include/
+    $ENV{INSTALL_DIR}/runtime/include/
+    $ENV{INSTALL_DIR}/driver
 )
 
 if(target STREQUAL "Simulator_Function")
     add_compile_options(-DFUNC_SIM)
 endif()
-
 # add host lib path
 link_directories(
     ${LIB_PATH}
     $ENV{HOME}/ascend_ddk/lib/
     $ENV{HOME}/Ascend/driver/
+    $ENV{HOME}/Ascend/ascend-toolkit/5.1.RC1.alpha005/
     $ENV{HOME}/Ascend/
     ${INC_PATH}/compiler/lib64/
+    $ENV{INSTALL_DIR}/runtime/lib64/stub
+    $ENV{THIRDPART_PATH}/lib/
+    $ENV{INSTALL_DIR}/driver/
 )
-
 add_executable(main
         engine_handle.cpp
         engine_post_dange.cpp
@@ -69,6 +76,7 @@ add_executable(main
         engine_post_road.cpp
         tcp_server.cpp
         uart_print.cpp
+        gpio.cpp
         main.cpp)
 
 if(target STREQUAL "Simulator_Function")
