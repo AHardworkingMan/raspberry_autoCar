@@ -79,62 +79,62 @@ int EnginePostRoad::hand_wheel(void)
 {
     if(post_data.work_mode==ASCBOT_ROAD_MODE)
     {
-        if(post_data.angle == 180 && post_data.direction == 1)
+        if (post_data.angle == 180 && post_data.direction == 1)
         {
-            post_data.wheel_left_speed = -0x07;
+            post_data.wheel_left_speed = 0x00;
             post_data.wheel_right_speed = 0x07;
         }
-        else  if(post_data.angle == -180 && post_data.direction == 1)
+        else  if (post_data.angle == -180 && post_data.direction == 1)
         {
             post_data.wheel_left_speed = 0x07;
-            post_data.wheel_right_speed = -0x07;
+            post_data.wheel_right_speed = 0x00;
         }
-        else  if(post_data.angle == 0 && post_data.direction == 1)
-        {
-            post_data.wheel_left_speed = 0x07;
-            post_data.wheel_right_speed = 0x07;
-        }
-        else  if(post_data.angle >= 45 && post_data.direction == 1)
-        {
-            post_data.wheel_left_speed = 0x03;
-            post_data.wheel_right_speed = 0x08;
-        }
-        else  if(post_data.angle >= 30 && post_data.direction == 1)
-        {
-            post_data.wheel_left_speed = 0x04;
-            post_data.wheel_right_speed = 0x07;
-        }
-        else  if(post_data.angle >= 15 && post_data.direction == 1)
+        else  if (post_data.angle == 0 && post_data.direction == 1)
         {
             post_data.wheel_left_speed = 0x05;
-            post_data.wheel_right_speed = 0x07;
-        }
-        else  if(post_data.angle >= 5 && post_data.direction == 1)
-        {
-            post_data.wheel_left_speed = 0x06;
-            post_data.wheel_right_speed = 0x07;
-        }
-        else  if(post_data.angle <= -45 && post_data.direction == 1)
-        {
-            post_data.wheel_left_speed = 0x08;
-            post_data.wheel_right_speed = 0x03;
-        }
-        else  if(post_data.angle <= -30 && post_data.direction == 1)
-        {
-            post_data.wheel_left_speed = 0x07;
-            post_data.wheel_right_speed = 0x04;
-        }
-        else  if(post_data.angle <= -15 && post_data.direction == 1)
-        {
-            post_data.wheel_left_speed = 0x07;
             post_data.wheel_right_speed = 0x05;
         }
-        else  if(post_data.angle <= -5 && post_data.direction == 1)
+        else  if (post_data.angle >= 45 && post_data.direction == 1)
+        {
+            post_data.wheel_left_speed = -0x03;
+            post_data.wheel_right_speed = 0x07;
+        }
+        else  if (post_data.angle >= 30 && post_data.direction == 1)
+        {
+            post_data.wheel_left_speed = -0x03;
+            post_data.wheel_right_speed = 0x07;
+        }
+        else  if (post_data.angle >= 15 && post_data.direction == 1)
+        {
+            post_data.wheel_left_speed = 0x05;
+            post_data.wheel_right_speed = 0x05;
+        }
+        else  if (post_data.angle >= 5 && post_data.direction == 1)
+        {
+            post_data.wheel_left_speed = 0x05;
+            post_data.wheel_right_speed = 0x05;
+        }
+        else  if (post_data.angle <= -45 && post_data.direction == 1)
         {
             post_data.wheel_left_speed = 0x07;
-            post_data.wheel_right_speed = 0x06;
+            post_data.wheel_right_speed = 0x00;
         }
-        else  if(post_data.direction == 0)
+        else  if (post_data.angle <= -30 && post_data.direction == 1)
+        {
+            post_data.wheel_left_speed = 0x07;
+            post_data.wheel_right_speed = 0x00;
+        }
+        else  if (post_data.angle <= -15 && post_data.direction == 1)
+        {
+            post_data.wheel_left_speed = 0x05;
+            post_data.wheel_right_speed = 0x05;
+        }
+        else  if (post_data.angle <= -5 && post_data.direction == 1)
+        {
+            post_data.wheel_left_speed = 0x05;
+            post_data.wheel_right_speed = 0x05;
+        }
+        else  if (post_data.direction == 0)
         {
             post_data.wheel_left_speed = 0;
             post_data.wheel_right_speed = 0;
