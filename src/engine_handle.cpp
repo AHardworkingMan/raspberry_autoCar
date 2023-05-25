@@ -4,7 +4,6 @@
 #include <sstream>
 #include <cmath>
 #include <regex>
-//#include "hiaiengine/log.h"
 
 #include <thread>
 #include <stdio.h>
